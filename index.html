@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10-sõrme trüki harjutaja</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container" aria-labelledby="page-title">
+      <header class="header">
+        <h1 id="page-title">10-sõrme pimesüsteemi trüki harjutaja</h1>
+        <p class="subtitle">
+          Harjuta eesti keeles päris kirjanduse lõikudega. Fookuses on täpsus,
+          rütm ja käte õige asend.
+        </p>
+      </header>
+
+      <section class="panel controls" aria-label="Harjutuse seaded">
+        <label for="excerpt-select">Vali tekst:</label>
+        <select id="excerpt-select"></select>
+
+        <button id="new-excerpt-btn" type="button">Võta uus juhuslik lõik</button>
+        <button id="reset-btn" type="button">Alusta uuesti</button>
+      </section>
+
+      <section class="panel" aria-label="Harjutatav tekst">
+        <h2 class="section-title">Harjutuse tekst</h2>
+        <p id="text-display" class="text-display" aria-live="polite"></p>
+      </section>
+
+      <section class="panel" aria-label="Sisestusväli">
+        <h2 class="section-title">Sinu sisestus</h2>
+        <textarea
+          id="typing-input"
+          rows="6"
+          placeholder="Alusta siia trükkimist…"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+        ></textarea>
+      </section>
+
+      <section class="panel stats" aria-label="Statistika">
+        <h2 class="section-title">Tulemused</h2>
+        <ul>
+          <li>Täpsus: <strong id="accuracy">100%</strong></li>
+          <li>Tempo: <strong id="wpm">0 sõna/min</strong></li>
+          <li>Aeg: <strong id="timer">0 s</strong></li>
+          <li>Progress: <strong id="progress">0%</strong></li>
+        </ul>
+      </section>
+
+      <section class="panel sources" aria-label="Tekstide allikad">
+        <h2 class="section-title">Kasutatud avaliku omandi teosed</h2>
+        <ul>
+          <li>A. H. Tammsaare – <em>Tõde ja õigus I</em> (1926)</li>
+          <li>Lydia Koidula – valitud proosa ja kirjad (19. sajand)</li>
+          <li>Eduard Vilde – <em>Mäeküla piimamees</em> (1916)</li>
+          <li>Oskar Luts – <em>Kevade</em> (1912)</li>
+        </ul>
+        <p class="hint">
+          Märkus: autorid on surnud üle 70 aasta tagasi, mistõttu teosed on
+          Eestis ja Euroopa Liidus üldjuhul autoriõiguste alt vabad.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
